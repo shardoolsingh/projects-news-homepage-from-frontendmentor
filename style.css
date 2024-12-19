@@ -10,8 +10,62 @@
 body{
     font-size: 16px;
     line-height: 1.5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/**** for responsive imgages ****/
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+p{
+    color: hsl(236, 13%, 42%);
+}
+
+div{
+    padding: 1rem .5rem;
+}
+
+.wrapper-primary{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main-aside{
+    background-color: hsl(240, 100%, 5%);
+}
+
+.main-aside h2{
+    color: hsl(35, 77%, 62%);
+}
+
+.main-aside h3{
+    color: hsl(36, 100%, 99%);
+}
+
+.main-aside p{
+    border-bottom: 1px solid gray;
+    padding-bottom: 1rem;
+}
+
+.aside-item-3 p{
+    border-bottom: unset;
+}
+
+.news-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .3rem;
+}
+
+.news-items-img{
+    grid-column: span 1;
+}
+
+.news-items-info{
+    grid-column: span 2;
+}
 /********* frontent atttribuition default style *****************/
 .attribution{
     font-size: 11px; text-align: center;
@@ -19,4 +73,23 @@ body{
 
 .attribution a{
         color: hsl(228, 45%, 44%);
+}
+
+
+
+/******** media queries ************/
+@media only screen and (min-width: 960px){
+    .main, .news{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .3rem;
     }
+
+    .main-main{
+        grid-column: span 2;
+    }
+
+    .main-aside{
+        grid-column: span 1;
+    }
+}
