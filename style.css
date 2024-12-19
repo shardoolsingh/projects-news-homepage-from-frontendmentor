@@ -1,0 +1,22 @@
+/********* css basic reset *******************/
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/********* frontent atttribuition default style *****************/
+.attribution{
+    font-size: 11px; text-align: center;
+}
+
+.attribution a{
+        color: hsl(228, 45%, 44%);
+    }
