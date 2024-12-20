@@ -215,11 +215,11 @@ h3{
     }
 
     .navbar-desktop-logo{
-        grid-column: span 3;
+        grid-column: span 6;
     }
 
     .navbar-desktop-nav-items{
-        grid-column: span 9;
+        grid-column: span 6;
         margin-top: auto;
         margin-bottom: auto;
     }
