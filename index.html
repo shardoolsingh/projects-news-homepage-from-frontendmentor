@@ -13,11 +13,32 @@
 
  <div class="wrapper-primary">
   <section class="header">
-    Home
-    New
-    Popular
-    Trending
-    Categories
+    <nav class="navbar-mobile">
+      <ul class="logo-items">
+        <li><a href="#"><img src="/assets/images/logo.svg" alt="logo image"></a></li>
+        <li><a href="#" onclick="toggleMenu()"><img id="menu-icon" src="/assets/images/icon-menu.svg" alt="menu icon"></a></li>
+      </ul>
+      <ul id="nav-items">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Categories</a></li>
+      </ul>
+    </nav>
+
+    <nav class="navbar-desktop">
+      <ul class="navbar-desktop-logo">
+        <li><a href="#"><img src="/assets/images/logo.svg" alt="website logo"></a></li>
+      </ul>
+      <ul class="navbar-desktop-nav-items">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Categories</a></li>
+      </ul>
+    </nav>
   </section>
 
   <section class="main">
@@ -92,7 +113,22 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://shardoolsingh.github.io">Shardool Singh</a>.
+    Coded by <a href="https://shardoolsingh.github.io" class="shardoolsingh">Shardool Singh</a>.
   </div>
+
+  <!-- Script goes here -->
+  <script>
+    const menuBar = document.getElementById("nav-items");
+    const menuIcon = document.getElementById("menu-icon");
+    function toggleMenu(){
+        if(menuBar.style.display === 'none'){
+            menuBar.style.display = 'unset';
+            menuIcon.src = '/assets/images/icon-menu-close.svg';
+        } else{
+            menuBar.style.display = 'none';
+            menuIcon.src = '/assets/images/icon-menu.svg';
+        }
+    }
+  </script>
 </body>
 </html>

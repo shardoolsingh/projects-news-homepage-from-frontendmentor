@@ -7,14 +7,20 @@
     list-style: none;
 }
 
+/********* custom font **********/
+@font-face {
+    font-family: interVariableFont;
+    src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+  }
+
 body{
     font-size: 16px;
     line-height: 1.5;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: interVariableFont, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 section{
-    margin-bottom: 2rem;
+    margin-bottom: .8rem;
 }
 
 h1{
@@ -32,6 +38,39 @@ img{
 p{
     color: hsl(236, 13%, 42%);
 }
+
+/********* style header section starts ******/
+.header{
+    padding-top: 1rem;
+}
+
+.navbar-desktop{
+    display: none;
+}
+
+#nav-items{
+    display: none;
+}
+
+.logo-items{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+    color: hsl(236, 13%, 42%);
+}
+
+nav a:hover{
+    color:hsl(5, 85%, 63%);
+    font-weight: bold;
+}
+
+#nav-items li{
+    padding: .5rem 0;
+}
+
+/******** style header section ends ********/
 
 h1, h2{
     padding-bottom: .5rem;
@@ -84,6 +123,8 @@ h3{
 .main-aside p{
     border-bottom: 1px solid gray;
     padding-bottom: 1rem;
+    color: lightgray;
+    opacity: .8;
 }
 
 .main-aside h3:hover{
@@ -119,16 +160,22 @@ h3{
 .news-items-info a:hover{
     color:hsl(5, 85%, 63%);
 }
-/********* frontent atttribuition default style *****************/
+
+/********* frontend atttribuition default style *****************/
 .attribution{
-    font-size: 11px; text-align: center;
+    font-size: 11px;
+    text-align: center;
+    padding: 1rem 0;
 }
 
 .attribution a{
         color: hsl(228, 45%, 44%);
 }
 
-
+.attribution a:hover{
+    color: hsl(5, 85%, 63%);
+    font-weight: bold;
+}
 
 /******** media queries ************/
 @media only screen and (min-width: 840px){
@@ -156,4 +203,30 @@ h3{
     .main-aside{
         grid-column: span 1;
     }
+
+    /****** style header for desktop here ******/
+    .navbar-mobile{
+        display: none;
+    }
+    
+    .navbar-desktop{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .navbar-desktop-logo{
+        grid-column: span 3;
+    }
+
+    .navbar-desktop-nav-items{
+        grid-column: span 9;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .navbar-desktop-nav-items{
+        display: flex;
+        justify-content: space-between;
+    }
+
 }
