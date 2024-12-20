@@ -10,7 +10,7 @@
 /********* custom font **********/
 @font-face {
     font-family: interVariableFont;
-    src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
   }
 
 body{
