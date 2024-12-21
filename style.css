@@ -61,6 +61,10 @@ nav a{
     color: hsl(236, 13%, 42%);
 }
 
+.nav-items-active{
+    color:hsl(5, 85%, 63%);
+}
+
 nav a:hover{
     color:hsl(5, 85%, 63%);
     font-weight: bold;
@@ -68,6 +72,10 @@ nav a:hover{
 
 #nav-items li{
     padding: .5rem 0;
+}
+
+.logo-items-mobile-menu-icon{
+    align-self: center;
 }
 
 /******** style header section ends ********/
